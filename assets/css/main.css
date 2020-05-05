@@ -1,9 +1,223 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 60px 90px;
   background-color: #313131;
   font-family: 'Roboto', sans-serif;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  color: #a9a9a9;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  margin-bottom: 4rem;
+}
+
+.container.column {
+  grid-auto-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container h1, .container h2, .container h3, .container h4 {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+.container p {
+  margin: 0;
+}
+
+.container a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.container a.active {
+  border: 4px solid #0ce5e1;
+  color: #0ce5e1;
+}
+
+.container .length, .container .year {
+  border: 2px solid #a9a9a9;
+  margin: -2px 0;
+  padding: 0 1rem;
+  line-height: 2.25rem;
+}
+
+.container .age {
+  padding: 0 !important;
+  border-radius: 50%;
+  background-color: #FFCC4A;
+  width: 2.25rem;
+  font-family: mono-space;
+  font-size: 1.25rem;
+  color: white;
+  line-height: 2.25rem;
+  text-align: center;
+}
+
+.container .age.red {
+  background-color: #FF5252;
+}
+
+.container .rating {
+  grid-column: span 3;
+  padding: 0 !important;
+  color: #FFCC4A;
+  width: calc((1.5rem * 5) + 1rem);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+}
+
+.container .rating .outline {
+  color: #a9a9a9;
+}
+
+.container input {
+  background-color: gray;
+  border: 0;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 150%;
+  width: 100%;
+  outline: 0;
+}
+
+.container input::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bfbfbf;
+  opacity: 1;
+  /* Firefox */
+}
+
+.container input:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bfbfbf;
+  opacity: 1;
+  /* Firefox */
+}
+
+.container input::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bfbfbf;
+  opacity: 1;
+  /* Firefox */
+}
+
+.container input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bfbfbf;
+  opacity: 1;
+  /* Firefox */
+}
+
+.container input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bfbfbf;
+}
+
+.container input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bfbfbf;
+}
+
+.container input[type=submit] {
+  font-size: 1rem;
+  width: auto;
+}
+
+.container footer {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  background-color: #0ce5e1;
+  height: 50px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-auto-flow: column;
+  padding: 0 1rem;
+  border-top: 1px solid #313131;
+  color: #313131;
+  min-width: 360px;
+}
+
+.container nav {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  background-color: #0ce5e1;
+  height: 50px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-auto-flow: column;
+  -ms-grid-columns: 24px 1fr;
+      grid-template-columns: 24px 1fr;
+  padding: 0 1rem;
+  border-bottom: 1px solid #313131;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  color: #313131;
+  min-width: 360px;
+}
+
+.container nav h1 {
+  margin: 0;
+  margin-left: -24px;
+}
+
+.container nav .navbar-toggler {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container nav .navbar-toggler i {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.color {
+  width: 75px;
+  height: 75px;
+  border: 1px solid #a9a9a9;
+}
+
+.color.black {
+  background-color: #313131;
+}
+
+.color.teal {
+  background-color: #0ce5e1;
+}
+
+.color.grey {
+  background-color: #a9a9a9;
+}
+
+.color.red {
+  background-color: #FF5252;
+}
+
+.color.yellow {
+  background-color: #FFCC4A;
+}
+
+.color.white {
+  background-color: white;
+}
+
+.color.light_white {
+  background-color: #cccccc;
 }
 /*# sourceMappingURL=main.css.map */
